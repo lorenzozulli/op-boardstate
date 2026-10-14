@@ -12,9 +12,9 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,woff2}'],
       },
       manifest: {
-        name: 'OPTCG companion',
-        short_name: 'OPTCG companion',
-        theme_color: '#ffcc5f',
+        name: 'OP Boardstate',
+        short_name: 'OP Boardstate',
+        theme_color: '#191919',
         icons: [
           {
             src: 'assets/manifest-icons/pwa-192.png',

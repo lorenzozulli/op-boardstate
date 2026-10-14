@@ -1,17 +1,17 @@
 .card-column {
   flex: 1 1 0;
-  min-width: 112px;
-  max-width: 190px;
+  min-width: 7rem;
+  max-width: 11.875rem;
   background: var(--panel);
-  border: 2px solid var(--border);
-  border-radius: 1px;
+  border: var(--border-width-thin) solid var(--border);
+  border-radius: 0.0625rem;
   display: flex;
   flex-direction: column;
   min-height: 0;
   overflow: hidden;
 }
 .card-column.leader {
-  border: 3px solid transparent;
+  border: var(--border-width-thick) solid transparent;
   background:
     linear-gradient(
         160deg,
@@ -22,24 +22,24 @@
     var(--accent-gradient) border-box;
 }
 .card-role {
-  font-size: 9px;
+  font-size: 0.5625rem;
   letter-spacing: 0.1em;
   font-weight: 800;
   text-align: center;
-  padding: 3px 0;
+  padding: var(--space-0-25) 0;
   background: var(--background);
   color: var(--muted);
 }
 .card-role.leader {
   background: var(--accent-gradient);
   color: var(--on-accent);
-  text-shadow: 0 0 3px var(--accent);
+  text-shadow: 0 0 0.1875rem var(--accent);
 }
 .card-header {
   display: flex;
   align-items: center;
-  gap: 2px;
-  padding: 4px 4px 0 8px;
+  gap: var(--space-0-0625);
+  padding: var(--space-0-25) var(--space-0-25) 0 var(--space-0-5);
 }
 .card-header input {
   flex: 1;
@@ -49,8 +49,8 @@
   color: var(--text);
   font: inherit;
   font-weight: 700;
-  font-size: 14px;
-  padding: 4px 0;
+  font-size: 0.875rem;
+  padding: var(--space-0-25) 0;
 }
 .knock-out-button {
   border: 0;
@@ -58,28 +58,28 @@
   color: var(--negative);
   font: inherit;
   font-weight: 700;
-  font-size: 11px;
-  padding: 6px;
+  font-size: 0.6875rem;
+  padding: var(--space-0-25);
 }
 .zones {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 6px;
+  gap: var(--space-0-25);
+  padding: var(--space-0-25);
 }
 .effect-chip {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 4px;
-  border: 1.5px solid currentColor;
-  border-radius: 1px;
-  padding: 5px 7px;
-  font-size: 12px;
+  gap: var(--space-0-25);
+  border: var(--border-width-thin) solid currentColor;
+  border-radius: 0.0625rem;
+  padding: var(--space-0-25);
+  font-size: 0.75rem;
   background: none;
   font-family: inherit;
   text-align: left;
-  min-height: 30px;
+  min-height: 1.875rem;
 }
 .effect-chip.keyword {
   color: var(--keyword);
@@ -90,23 +90,23 @@
 .effect-chip i {
   font-style: normal;
   opacity: 0.6;
-  padding-left: 4px;
+  padding-left: var(--space-0-25);
 }
 .ability-used-button {
-  margin: 0 6px 6px;
+  margin: 0 var(--space-0-25) var(--space-0-25);
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  border: 1.5px solid var(--border);
+  gap: var(--space-0-25);
+  border: var(--border-width-thin) solid var(--border);
   background: var(--background);
   color: var(--muted);
-  border-radius: 1px;
-  padding: 8px 6px;
+  border-radius: 0.0625rem;
+  padding: var(--space-0-5) var(--space-0-25);
   font: inherit;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 600;
-  min-height: 36px;
+  min-height: 2.25rem;
 }
 .ability-used-button.active {
   background: var(--accent);

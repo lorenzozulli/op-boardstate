@@ -1,8 +1,8 @@
 :root {
   box-sizing: border-box;
-  padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
-  --background: #f2efe8;
+  padding-top: env(safe-area-inset-top, 0);
+  padding-bottom: env(safe-area-inset-bottom, 0);
+  --background: #f2f2f2;
   --panel: #fff;
   --text: #1d1d1f;
   --muted: #6b6b70;
@@ -23,6 +23,17 @@
   --leader-black-contrast: #fff;
   --leader-yellow: #e0b000;
   --leader-yellow-contrast: #1d1d1f;
+  --space-0-0625: 0.0625rem;
+  --space-0-25: 0.25rem;
+  --space-0-5: 0.5rem;
+  --space-0-75: 0.75rem;
+  --space-1: 1rem;
+  --space-1-25: 1.25rem;
+  --space-1-5: 1.5rem;
+  --space-1-75: 1.75rem;
+  --space-2: 2rem;
+  --border-width-thin: 1px;
+  --border-width-thick: 4px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
@@ -115,9 +126,12 @@ body,
 body {
   background: var(--background);
   color: var(--text);
-  font: 'Roboto Condensed Variable',
+  font:
+    0.8125rem/1.25 'Roboto Condensed Variable',
+    system-ui,
+    ubuntu;
 }
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   body {
     background: rgb(26, 26, 26);
   }

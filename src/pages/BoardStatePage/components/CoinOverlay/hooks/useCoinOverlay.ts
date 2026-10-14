@@ -4,12 +4,7 @@ import { useTranslation } from 'react-i18next';
 
 export type CoinSide = 'heads' | 'tails';
 
-const FULL_TURNS_PER_FLIP = 5;
-
 const randomSide = (): CoinSide => (Math.random() < 0.5 ? 'heads' : 'tails');
-
-const landingRotation = (side: CoinSide): number =>
-  FULL_TURNS_PER_FLIP * 360 + (side === 'tails' ? 180 : 0);
 
 export function useCoinOverlay() {
   const { t } = useTranslation('coinoverlay');
@@ -37,7 +32,7 @@ export function useCoinOverlay() {
 
   const close = () => setOpen(false);
 
-  return { t, open, side, flipCount, rotation: landingRotation(side), openCoin, close, flip, finishFlip };
+  return { t, open, side, flipCount, openCoin, close, flip, finishFlip };
 }
 
 export type Coin = ReturnType<typeof useCoinOverlay>;

@@ -1,4 +1,4 @@
-import { IconMinus, IconPlus, IconCheck, IconPlayerPauseFilled, IconPlayerPlayFilled, IconRotate, IconSettings } from "@tabler/icons-react";
+import { IconMinus, IconPlus, IconCheck, IconPlayerPauseFilled, IconPlayerPlayFilled, IconRotate, IconSettingsFilled } from "@tabler/icons-react";
 import { formatTime } from "./utils/formatTime";
 import { useTimer } from "./hooks/useTimerControls";
 import "./style.css";
@@ -23,7 +23,7 @@ export function TimerControls() {
       <button className="timer-display" onClick={timer.toggle}>{formatTime(timer.left)}</button>
       <button className="toolbar-button" onClick={timer.toggle}>{timer.running ? <IconPlayerPauseFilled /> : <IconPlayerPlayFilled />}</button>
       <button className="toolbar-button" onClick={timer.reset}><IconRotate /></button>
-      <button className="toolbar-button" onClick={timer.toggleSetting}><IconSettings /></button>
+      <button className="toolbar-button" onClick={timer.toggleSetting}><IconSettingsFilled /></button>
     </div>
   );
 }

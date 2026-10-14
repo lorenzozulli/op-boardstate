@@ -1,4 +1,3 @@
-import type { CSSProperties } from 'react';
 import { IconX } from '@tabler/icons-react';
 import type { Coin } from './hooks/useCoinOverlay';
 import './style.css';
@@ -12,12 +11,7 @@ export function CoinOverlay({ coin }: { coin: Coin }) {
           <button className="toolbar-button" onClick={coin.close}><IconX /></button>
         </div>
         <button className="coin" onClick={coin.flip}>
-          <div
-            key={coin.flipCount}
-            className="coin-body"
-            style={{ '--coin-rotation': `${coin.rotation}deg` } as CSSProperties}
-            onAnimationEnd={coin.finishFlip}
-          >
+          <div key={coin.flipCount} className={`coin-body ${coin.side}`} onAnimationEnd={coin.finishFlip}>
             <span className="coin-face heads">{t('coin_overlay.heads')}</span>
             <span className="coin-face tails">{t('coin_overlay.tails')}</span>
           </div>
