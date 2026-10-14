@@ -82,8 +82,3 @@
     transform: rotateX(1980deg) scale(1);
   }
 }
-@media (prefers-reduced-motion: reduce) {
-  .coin-body {
-    animation-duration: 1ms;
-  }
-}
