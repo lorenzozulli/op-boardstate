@@ -1,12 +1,12 @@
 .timer-display {
   font: inherit;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   background: none;
   border: 0;
   color: var(--text);
-  padding: 0 4px;
+  padding: 0 var(--space-0-25);
 }
 .control-group.time-low .timer-display {
   color: var(--negative);

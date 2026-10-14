@@ -1,32 +1,32 @@
 .color-picker {
   background: var(--panel);
-  border-radius: 1px;
-  padding: 12px;
+  border-radius: 0.0625rem;
+  padding: var(--space-0-75);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--space-0-5);
 }
 .color-picker-title {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 .color-swatches {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+  gap: var(--space-0-25);
 }
 .color-swatch {
   display: flex;
   align-items: center;
-  gap: 6px;
-  border: 1.5px solid var(--border);
+  gap: var(--space-0-25);
+  border: var(--border-width-thin) solid var(--border);
   background: var(--background);
   color: var(--text);
-  border-radius: 1px;
-  padding: 6px 10px 6px 6px;
+  border-radius: 0.0625rem;
+  padding: var(--space-0-25) var(--space-0-5) var(--space-0-25) var(--space-0-25);
   font: inherit;
-  font-size: 12px;
-  min-height: 36px;
+  font-size: 0.75rem;
+  min-height: 2.25rem;
 }
 .color-swatch.selected {
   border-color: var(--text);
@@ -36,16 +36,16 @@
   opacity: 0.4;
 }
 .color-dot {
-  width: 22px;
-  height: 22px;
+  width: 1.375rem;
+  height: 1.375rem;
   border-radius: 50%;
-  border: 1.5px solid var(--border);
+  border: var(--border-width-thin) solid var(--border);
   background: var(--swatch);
   color: var(--swatch-contrast, #fff);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 11px;
+  font-size: 0.6875rem;
   font-weight: 800;
 }
 .color-swatch[data-color="red"] {
@@ -71,5 +71,5 @@
 .color-picker-actions {
   display: flex;
   justify-content: flex-end;
-  gap: 6px;
+  gap: var(--space-0-25);
 }
