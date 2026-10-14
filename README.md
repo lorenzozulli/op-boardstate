@@ -1,77 +1,23 @@
-# op-boardstate
-One Piece TCG board state manager
-# React + TypeScript + Vite
+# ✖ One Piece TCG Board State Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Powerful One Piece TCG companion app while playing, Manage your board with ease!
 
-Currently, two official plugins are available:
+### ✅ Main Features
+1. Track power modifiers across the whole board
+2. Keep count of Leader life, card costs and used abilities
+3. Tag cards with keywords (Rush, Blocker, Double Attack...) or custom statuses
+4. Match timer with adjustable duration and low-time warning
+5. Coin flip and dice rolls from d4 to d100
+6. Customize the board with your Leader colors
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 💻 Installation
+- No installation required, just visit the following [link!](https://op-boardstate.vercel.app)
+- Installable as a PWA, works offline too!
 
-## React Compiler
+### 🔗 Technologies
+- React
+- Typescript
+- Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+### 📬 Contacts
+[My website](https://lorenzozulli.github.io)
