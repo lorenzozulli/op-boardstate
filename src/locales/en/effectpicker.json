@@ -1,0 +1,8 @@
+{
+  "effect_picker": {
+    "keyword_label": "Keyword",
+    "status_label": "Status",
+    "custom_placeholder": "Custom",
+    "close_button": "Close"
+  }
+}

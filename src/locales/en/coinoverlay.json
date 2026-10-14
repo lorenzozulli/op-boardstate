@@ -1,0 +1,7 @@
+{
+  "coin_overlay": {
+    "heads": "Heads",
+    "tails": "Tails",
+    "retry": "Touch the coin to flip again"
+  }
+}

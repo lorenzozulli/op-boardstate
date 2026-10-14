@@ -1,0 +1,6 @@
+{
+  "dice_overlay": {
+    "retry": "Touch the number to retry",
+    "dice_type": "d{{n}}"
+  }
+}

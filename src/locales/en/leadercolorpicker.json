@@ -1,0 +1,12 @@
+{
+  "leader_color_picker": {
+    "default": "Default",
+    "leader_colors": "Leader Colors (max {{max_leader_colors}})",
+    "red": "Red",
+    "green": "Green",
+    "blue": "Blue",
+    "purple": "Purple",
+    "black": "Black",
+    "yellow": "Yellow"
+  }
+}

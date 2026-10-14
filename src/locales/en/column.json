@@ -1,0 +1,12 @@
+{
+  "column": {
+    "ko_button": "K.O.",
+    "ability_used": "Ability Used",
+    "effect_status": "Effect/Status",
+    "leader_label": "LEADER",
+    "character_label": "CHARACTER",
+    "power_label": "Power",
+    "life_label": "Life",
+    "cost_label": "Cost"
+  }
+}

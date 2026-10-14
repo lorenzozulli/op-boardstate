@@ -1,0 +1,75 @@
+.color-picker {
+  background: var(--panel);
+  border-radius: 1px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.color-picker-title {
+  font-weight: 700;
+  font-size: 14px;
+}
+.color-swatches {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+.color-swatch {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid var(--border);
+  background: var(--background);
+  color: var(--text);
+  border-radius: 1px;
+  padding: 6px 10px 6px 6px;
+  font: inherit;
+  font-size: 12px;
+  min-height: 36px;
+}
+.color-swatch.selected {
+  border-color: var(--text);
+  font-weight: 700;
+}
+.color-swatch:disabled {
+  opacity: 0.4;
+}
+.color-dot {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--swatch);
+  color: var(--swatch-contrast, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+}
+.color-swatch[data-color="red"] {
+  --swatch: var(--leader-red);
+}
+.color-swatch[data-color="green"] {
+  --swatch: var(--leader-green);
+}
+.color-swatch[data-color="blue"] {
+  --swatch: var(--leader-blue);
+}
+.color-swatch[data-color="purple"] {
+  --swatch: var(--leader-purple);
+}
+.color-swatch[data-color="black"] {
+  --swatch: var(--leader-black);
+  --swatch-contrast: var(--leader-black-contrast);
+}
+.color-swatch[data-color="yellow"] {
+  --swatch: var(--leader-yellow);
+  --swatch-contrast: var(--leader-yellow-contrast);
+}
+.color-picker-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 6px;
+}

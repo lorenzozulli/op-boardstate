@@ -1,0 +1,29 @@
+.dice-panel {
+  background: var(--panel);
+  border-radius: 1px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.dice-sides {
+  display: flex;
+  gap: 6px;
+}
+.dice-value {
+  font: inherit;
+  font-size: 64px;
+  font-weight: 800;
+  width: 150px;
+  height: 110px;
+  border: 2px solid var(--accent);
+  border-radius: 1px;
+  background: var(--background);
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+.dice-hint {
+  font-size: 11px;
+  color: var(--muted);
+}

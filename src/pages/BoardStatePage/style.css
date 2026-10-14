@@ -1,0 +1,53 @@
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.toolbar-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background: none;
+  color: var(--text);
+  border-radius: 1px;
+  min-width: 34px;
+  height: 30px;
+  font: inherit;
+}
+.toolbar-button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+.effect-list {
+  padding: 4px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  overflow-y: auto;
+  flex: 1;
+  border-top: 1px solid var(--border);
+}
+.effect-list-button {
+  border: 1.5px dashed var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  color: var(--muted);
+  border-radius: 1px;
+  padding: 6px;
+  font: inherit;
+  font-size: 12px;
+  min-height: 30px;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}

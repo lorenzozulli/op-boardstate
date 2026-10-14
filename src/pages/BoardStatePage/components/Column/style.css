@@ -1,0 +1,115 @@
+.card-column {
+  flex: 1 1 0;
+  min-width: 112px;
+  max-width: 190px;
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: hidden;
+}
+.card-column.leader {
+  border: 3px solid transparent;
+  background:
+    linear-gradient(
+        160deg,
+        color-mix(in srgb, var(--accent) 14%, var(--panel)),
+        color-mix(in srgb, var(--accent-secondary) 14%, var(--panel))
+      )
+      padding-box,
+    var(--accent-gradient) border-box;
+}
+.card-role {
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  font-weight: 800;
+  text-align: center;
+  padding: 3px 0;
+  background: var(--background);
+  color: var(--muted);
+}
+.card-role.leader {
+  background: var(--accent-gradient);
+  color: var(--on-accent);
+  text-shadow: 0 0 3px var(--accent);
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 4px 0 8px;
+}
+.card-header input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 4px 0;
+}
+.knock-out-button {
+  border: 0;
+  background: none;
+  color: var(--negative);
+  font: inherit;
+  font-weight: 700;
+  font-size: 11px;
+  padding: 6px;
+}
+.zones {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+}
+.effect-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  border: 1.5px solid currentColor;
+  border-radius: 1px;
+  padding: 5px 7px;
+  font-size: 12px;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  min-height: 30px;
+}
+.effect-chip.keyword {
+  color: var(--keyword);
+}
+.effect-chip.status {
+  color: var(--status);
+}
+.effect-chip i {
+  font-style: normal;
+  opacity: 0.6;
+  padding-left: 4px;
+}
+.ability-used-button {
+  margin: 0 6px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border: 1.5px solid var(--border);
+  background: var(--background);
+  color: var(--muted);
+  border-radius: 1px;
+  padding: 8px 6px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  min-height: 36px;
+}
+.ability-used-button.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
