@@ -1,7 +1,8 @@
-import { IconCheckbox, IconPlus, IconSquare, IconX } from '@tabler/icons-react';
+import { IconCheckbox, IconGripHorizontal, IconPlus, IconSquare, IconX } from '@tabler/icons-react';
 import type { Board } from '../../hooks/useBoardStatePage';
 import { LEADER_ID } from '../../hooks/useBoardStatePage';
 import type { CardData, CardId } from '../../types';
+import type { CharacterDrag } from '../Game/hooks/useCharacterDrag';
 import { EffectPicker } from '../EffectPicker/EffectPicker';
 import { Zone } from '../Zone/Zone';
 import './style.css';
@@ -9,24 +10,34 @@ import { useColumn } from './hooks/useColumn';
 
 interface ColumnProps {
   board: Board;
+  characterDrag: CharacterDrag;
   id: CardId;
   card: CardData;
 }
 
-export function Column({ board, id, card }: ColumnProps) {
+export function Column({ board, characterDrag, id, card }: ColumnProps) {
   const isLeader = id === LEADER_ID;
 
   const { t } = useColumn();
 
   return (
 
-    <div className={`card-column ${isLeader ? 'leader' : ''}`}>
+    <div
+      ref={isLeader ? undefined : characterDrag.registerColumn(id)}
+      className={`card-column ${isLeader ? 'leader' : ''} ${characterDrag.isDragging(id) ? 'dragging' : ''}`}
+    >
       {
         board.adding === id ? (
           <></>
         ) : (
           <>
-            <div className={`card-role ${isLeader ? 'leader' : ''}`}>{isLeader ? `${t('column.leader_label')}` : `${t('column.character_label')}`}</div>
+            {isLeader ? (
+              <div className="card-role leader">{t('column.leader_label')}</div>
+            ) : (
+              <div className="card-role drag-handle" {...characterDrag.handleHandlers(id)}>
+                <IconGripHorizontal size={12} />{t('column.character_label')}
+              </div>
+            )}
 
             <div className="card-header">
               <input

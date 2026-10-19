@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react';
 import type { PointerEvent } from 'react';
 import type { CardData, CardId, Tag, TagKind, ZoneField } from '../types';
+import { isPermutation } from '../utils/isPermutation';
 import { vibrate } from '../utils/vibrate';
 
 export const LEADER_ID: CardId = 'L';
@@ -73,6 +74,9 @@ export function useBoard() {
     setAdding((prev) => (prev === id ? null : prev));
   };
 
+  const reorderChars = (order: CardId[]) =>
+    setChars((previous) => (isPermutation(order, previous) ? order : previous));
+
   /** Rinomina; un nome vuoto mantiene quello precedente. Ritorna il nome applicato. */
   const rename = (id: CardId, value: string): string => {
     const next = value.trim() || cards[id].name;
@@ -140,6 +144,7 @@ export function useBoard() {
     canAddChar,
     addChar,
     removeChar,
+    reorderChars,
     rename,
     addTag,
     removeTag,

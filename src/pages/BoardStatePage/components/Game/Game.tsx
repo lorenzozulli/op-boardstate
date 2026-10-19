@@ -11,6 +11,7 @@ import { LeaderColorPicker } from '../LeaderColorPicker/LeaderColorPicker';
 import { useLeaderColors } from '../LeaderColorPicker/hooks/useLeaderColors';
 import { TimerControls } from '../TimerControls/TimerControls';
 import './style.css';
+import { useCharacterDrag } from './hooks/useCharacterDrag';
 import { useGame } from './hooks/useGame';
 
 export function Game({ onReset }: { onReset: () => void }) {
@@ -19,9 +20,10 @@ export function Game({ onReset }: { onReset: () => void }) {
   const coin = useCoinOverlay();
   const leaderColors = useLeaderColors();
   const { t } = useGame();
+  const cardsEl = useRef<HTMLDivElement>(null);
+  const characterDrag = useCharacterDrag({ chars: board.chars, container: cardsEl, onReorder: board.reorderChars });
 
   // Quando aggiungo un personaggio scorro fino alla sua colonna
-  const cardsEl = useRef<HTMLDivElement>(null);
   const prevChars = useRef(board.chars.length);
   useEffect(() => {
     if (board.chars.length > prevChars.current && cardsEl.current) {
@@ -45,10 +47,10 @@ export function Game({ onReset }: { onReset: () => void }) {
           </div>
         </div>
 
-        <div className="cards" ref={cardsEl}>
-          <Column board={board} id={LEADER_ID} card={board.cards[LEADER_ID]} />
+        <div className={`cards ${characterDrag.isReordering ? 'reordering' : ''}`} ref={cardsEl}>
+          <Column board={board} characterDrag={characterDrag} id={LEADER_ID} card={board.cards[LEADER_ID]} />
           {board.chars.map((id: CardId) => (
-            <Column key={id} board={board} id={id} card={board.cards[id]} />
+            <Column key={id} board={board} characterDrag={characterDrag} id={id} card={board.cards[id]} />
           ))}
           {board.canAddChar && (
             <button className="add-character-button" onClick={board.addChar}><IconPlus /></button>

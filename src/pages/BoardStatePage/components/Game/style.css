@@ -44,12 +44,20 @@
   font-weight: 600;
 }
 .cards {
+  position: relative;
   flex: 1;
   display: flex;
   gap: var(--space-0-25);
   padding: var(--space-0-5);
   overflow-x: auto;
   min-height: 0;
+}
+.cards.reordering .card-column:not(.dragging) {
+  transition: transform 180ms ease-out;
+}
+.cards.reordering .card-column > :not(.drag-handle),
+.cards.reordering .add-character-button {
+  pointer-events: none;
 }
 .add-character-button {
   flex: none;

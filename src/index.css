@@ -10,8 +10,8 @@
   --accent: #c0392b;
   --positive: #2e7d5b;
   --negative: #c0392b;
-  --keyword: #2b5ea7;
-  --status: #b36b00;
+  --status: #2b5ea7;
+  --keyword: #b36b00;
   --on-accent: #fff;
   --accent-secondary: var(--accent);
   --accent-gradient: linear-gradient(135deg, var(--accent), var(--accent-secondary));

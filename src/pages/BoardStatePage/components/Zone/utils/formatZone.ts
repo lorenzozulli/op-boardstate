@@ -8,6 +8,6 @@ export const formatZone = (field: ZoneField, value: number): string =>
 
 export const zoneClass = (field: ZoneField, value: number): string => {
   if (field === 'life') return 'life';
-  if (field === 'bonus') return value > 0 ? 'favorable' : value < 0 ? 'unfavorable' : '';
+  if (field === 'bonus' || field === 'cost') return value > 0 ? 'favorable' : value < 0 ? 'unfavorable' : '';
   return value < 0 ? 'favorable' : value > 0 ? 'unfavorable' : '';
 };
